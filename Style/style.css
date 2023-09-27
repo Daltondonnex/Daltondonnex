@@ -2,3 +2,14 @@ p{
     color: red;
     border:1px solid black;
 }
+li{
+    color:blue;
+}
+body{
+    width :600px;
+    margin :0 auto;
+    background :#ff9500;
+}
+html{
+    background-color: blue;
+}
