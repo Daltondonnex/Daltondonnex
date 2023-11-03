@@ -1,0 +1,29 @@
+Public Class Form1
+    Private Sub btnCompute_Click(sender As Object, e As EventArgs) Handles btnCompute.Click
+        Dim intSubject1, intSubject2, intSubject3, intSubject4, intSubject5, intmean As Integer
+        Dim strgrade As Char
+        Integer.TryParse(txtSubject1.Text, intSubject1)
+        Integer.TryParse(txtSubject2.Text, intSubject2)
+        Integer.TryParse(txtSubject3.Text, intSubject3)
+        Integer.TryParse(txtSubject4.Text, intSubject4)
+        Integer.TryParse(txtSubject5.Text, intSubject5)
+        intmean = (intSubject1 + intSubject2 + intSubject3 + intSubject4 + intSubject5) / 5
+        txtmean.Text = intmean
+
+        If intmean >= 70 And intmean <= 100 Then
+            strgrade = "A"
+        ElseIf intmean >= 60 And intmean < 70 Then
+            strgrade = "B"
+        ElseIf intmean >= 50 And intmean < 60 Then
+            strgrade = "C"
+        ElseIf intmean >= 40 And intmean < 50 Then
+            strgrade = "D"
+        ElseIf intmean >= 0 And intmean < 40 Then
+            strgrade = "E"
+        Else
+            strgrade = "Invalid"
+        End If
+
+        txtGrade.Text = strgrade.ToString()
+    End Sub
+End Class
